@@ -1,24 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
+import Home from './Componets/Home/Home';
+import Header from './Componets/Header/Header';
+import Shipment from './Componets/Shipment/Shipment';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { createContext, useState } from 'react';
+
+export const ContextName = createContext()//first work
 
 function App() {
+  const [count,setCount] = useState(0)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ContextName.Provider className="App" value={[count,setCount]}>  {/*second work*/}
+      <Home></Home>
+      <Header></Header>
+      <Shipment></Shipment>
+    </ContextName.Provider>
   );
 }
 
