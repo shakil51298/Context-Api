@@ -2,11 +2,11 @@ import React, { useContext } from 'react';
 import { ContextName } from '../../../../App';
 
 const CategoryDetails = (props) => {
-    const hisName = useContext(ContextName)
-    const {count}=props;
+    const {name,category} = props.products
     return (
-        <div>
-            <h5>this is cactegory details has : {count} and his naem {hisName}</h5>
+        <div className="border border-success p-2 m-2">
+            <h5>Product Name: {name} </h5>
+            <p>Category: {category}</p>
         </div>
     );
 };

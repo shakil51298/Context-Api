@@ -4,15 +4,23 @@ import { ContextName } from '../../App';
 
 const Header = () => {
     const [count,setCount] = useContext(ContextName)
-    const increments =()=>{
-        const total = count + 1;
-        setCount(total)
+    const Laptop= () =>{
+        setCount('Laptop')
+    }
+    const Mobile= () =>{
+        setCount('Mobile')
+    }
+    const Camera= () =>{
+        setCount('Camera')
     }
 
     return (
         <div>
             <h4>this is Header page : {count}</h4>
-            <button className="btn btn-success" onClick={increments}>Increments</button>
+            <button className="btn btn-success ml-2" onClick={Laptop}>Laptop</button>
+            <button className="btn btn-success ml-2" onClick={Mobile}>Mobile</button>
+            <button className="btn btn-success ml-2" onClick={Camera}>Camera</button>
+            
         </div>
     );
 };

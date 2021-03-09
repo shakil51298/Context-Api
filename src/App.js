@@ -8,7 +8,7 @@ import { createContext, useState } from 'react';
 export const ContextName = createContext()//first work
 
 function App() {
-  const [count,setCount] = useState(0)
+  const [count,setCount] = useState()
   return (
     <ContextName.Provider className="App" value={[count,setCount]}>  {/*second work*/}
       <Home></Home>
